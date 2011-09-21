@@ -1,0 +1,44 @@
+{ 
+	Success: true,
+	Result: {
+	 EnMantenimiento: false,
+	 Debug: false,
+	 Nombre: "Sample",
+	 AppVersion: "0.1",
+	 FileSystemVersion: "0.1",
+	 Modulos: [
+			   {
+				   Name: "SampleModule",
+				   Description: "Sample module.",
+				   Key: "samplemodule",
+				   Entities: [{
+                          Name: "SampleEntity",
+                          Type: "SampleEntityType",
+                          Service: "SampleEntityServiceType",
+                          Open: true,
+                          Update: true,
+                          Delete: false,
+                          Find: true,
+                          Queries: [{
+                                        Name: "All entities",
+                                        Consulta: "from Entity m where m.Name like :criteria",
+                                        LinkQuery: true
+                                    }, {
+                                        Name: "All entities",
+                                        Consulta: 
+                                            "select o.Id, o.Titulo, o.Prioridad, o.UsuarioAdd.Nombre, o.FechaAdd " +
+                                            "from Mensaje o where o.Titulo like :criteria " +
+                                            "order by o.FechaAdd",
+                                        Columns: [{  Name: "Id" },
+                                              { Name: "Titulo" },
+                                              { Name: "Prioridad" },
+                                              { Header: "Usuario Alta", Name: "UsuarioAdd", Hidden: true },
+                                              { Header: "Fecha Alta", Name: "FechaAdd", Hidden: true, Format: "date" }
+                                         ]
+                                    }
+                            ]
+                      }]
+			   }
+		]
+	}
+ }

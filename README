@@ -1,3 +1,5 @@
 Karma Project
 
-A framework built on top of ExtJS4 framework to ease the build metadata-based applications.
+A framework built on top of ExtJS 3 framework to ease the build metadata-based applications.
+
+Plan is to migrate it to use ExtJS 4
