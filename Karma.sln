@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karma.Core", "src\Karma.Core\Karma.Core.csproj", "{0CA124C4-1426-415B-9213-2D35BB7699DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karma.Core.Test", "test\Karma.Core.Test\Karma.Core.Test.csproj", "{1C9D59B5-1021-458A-8A33-D24A3C87BFA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9FB7E13D-5312-4422-971A-0327567F4744}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test projects", "Test projects", "{49997E0B-141D-412B-AEDA-8EFBF37C118F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karma.Core.AssemblyAnalyzerSample", "test\Karma.Core.AssemblyAnalyzerSample\Karma.Core.AssemblyAnalyzerSample.csproj", "{A8910016-9D16-4B85-A36B-BAB35AF67D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karma.Core.ClassAnalyzerSample", "test\Karma.Core.ClassAnalyzerSample\Karma.Core.ClassAnalyzerSample.csproj", "{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{ED451E6B-58D7-45F0-A0F2-D2A45A573BBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{A71798CE-4364-4D31-ACDE-3DD17906139B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1970F034-6B3A-4080-9695-7A9645F69E39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CA124C4-1426-415B-9213-2D35BB7699DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA124C4-1426-415B-9213-2D35BB7699DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA124C4-1426-415B-9213-2D35BB7699DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA124C4-1426-415B-9213-2D35BB7699DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9D59B5-1021-458A-8A33-D24A3C87BFA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9D59B5-1021-458A-8A33-D24A3C87BFA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9D59B5-1021-458A-8A33-D24A3C87BFA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9D59B5-1021-458A-8A33-D24A3C87BFA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8910016-9D16-4B85-A36B-BAB35AF67D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8910016-9D16-4B85-A36B-BAB35AF67D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8910016-9D16-4B85-A36B-BAB35AF67D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8910016-9D16-4B85-A36B-BAB35AF67D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C9D59B5-1021-458A-8A33-D24A3C87BFA9} = {9FB7E13D-5312-4422-971A-0327567F4744}
+		{0CA124C4-1426-415B-9213-2D35BB7699DC} = {9FB7E13D-5312-4422-971A-0327567F4744}
+		{49997E0B-141D-412B-AEDA-8EFBF37C118F} = {9FB7E13D-5312-4422-971A-0327567F4744}
+		{A8910016-9D16-4B85-A36B-BAB35AF67D62} = {49997E0B-141D-412B-AEDA-8EFBF37C118F}
+		{B6E5E89D-BF08-44A1-A2AE-55CEA2670F8F} = {49997E0B-141D-412B-AEDA-8EFBF37C118F}
+	EndGlobalSection
+EndGlobal

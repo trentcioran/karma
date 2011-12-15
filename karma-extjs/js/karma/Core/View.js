@@ -1,4 +1,0 @@
-/**
- * Proyecto: Karma
- * @author Mislas
- */
