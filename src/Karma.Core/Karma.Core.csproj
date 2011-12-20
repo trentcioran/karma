@@ -54,8 +54,15 @@
     <Compile Include="Metadata\ConstructorMetadata.cs" />
     <Compile Include="Metadata\ContractMetadata.cs" />
     <Compile Include="Metadata\EnablerMetadata.cs" />
+    <Compile Include="Metadata\Extractors\AttributeExtractor.cs" />
+    <Compile Include="Metadata\Extractors\ConstructorExtractor.cs" />
     <Compile Include="Metadata\Extractors\ContractExtractor.cs" />
+    <Compile Include="Metadata\Extractors\EnablerExtractor.cs" />
+    <Compile Include="Metadata\Extractors\ExtractorBase.cs" />
     <Compile Include="Metadata\Extractors\IExtractor.cs" />
+    <Compile Include="Metadata\Extractors\OperationExtractor.cs" />
+    <Compile Include="Metadata\Extractors\PropertyExtractor.cs" />
+    <Compile Include="Metadata\Extractors\ValidatorExtractor.cs" />
     <Compile Include="Metadata\Heuristics\AttributeHeuristic.cs" />
     <Compile Include="Metadata\Heuristics\ConstructorHeuristic.cs" />
     <Compile Include="Metadata\Heuristics\ContractHeuristic.cs" />

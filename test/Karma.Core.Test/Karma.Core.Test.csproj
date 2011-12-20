@@ -55,15 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Metadata\AssemblyAnalyzerFixture.cs" />
-    <Compile Include="Metadata\ClassAnalyzerFixture.cs" />
+    <Compile Include="Metadata\Analyzer\AssemblyAnalyzerFixture.cs" />
+    <Compile Include="Metadata\Analyzer\ClassAnalyzerFixture.cs" />
+    <Compile Include="Metadata\Extractors\AttributeExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\ConstructorExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\ContractExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\EnablerExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\OperationExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\ValidatorExtractorFixture.cs" />
+    <Compile Include="Metadata\Heuristics\AttributeHeuristicFixture.cs" />
+    <Compile Include="Metadata\Heuristics\ConstructorHeuristicFixture.cs" />
+    <Compile Include="Metadata\Heuristics\ContractHeuristicFixture.cs" />
+    <Compile Include="Metadata\Heuristics\EnablerHeuristicFixture.cs" />
+    <Compile Include="Metadata\Heuristics\OperationHeuristicFixture.cs" />
+    <Compile Include="Metadata\Heuristics\ValidatorHeuristicFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DomainModel\" />
-    <Folder Include="Metadata\Analyzer\" />
-    <Folder Include="Metadata\Extractors\" />
-    <Folder Include="Metadata\Heuristics\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

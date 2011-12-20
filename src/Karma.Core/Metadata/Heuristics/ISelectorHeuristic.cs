@@ -6,6 +6,10 @@ namespace Karma.Core.Metadata.Heuristics
     {
         Type Target { get; }
 
+        bool IsExclusive { get; }
+
+        bool HasPrecedence(ISelectorHeuristic heuristic, object member);
+
         bool IsSelectable(object memberInfo);
     }
 }

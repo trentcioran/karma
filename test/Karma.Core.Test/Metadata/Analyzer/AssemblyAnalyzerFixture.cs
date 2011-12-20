@@ -5,7 +5,7 @@ using Karma.Core.Metadata.Analyzer;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace Karma.Core.Test.Metadata
+namespace Karma.Core.Test.Metadata.Analyzer
 {
     [TestFixture]
     public class AssemblyAnalyzerFixture

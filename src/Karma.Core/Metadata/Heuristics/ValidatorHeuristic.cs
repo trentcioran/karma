@@ -9,6 +9,11 @@ namespace Karma.Core.Metadata.Heuristics
     {
         private readonly Regex _validatorExpression = new Regex(@"[\w]+IsValid$");
 
+        public override bool IsExclusive
+        {
+            get { return true; }
+        }
+
         public override bool IsSelectable(object memberInfo)
         {
             MethodInfo info = memberInfo as MethodInfo;

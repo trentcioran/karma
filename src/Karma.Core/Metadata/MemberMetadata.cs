@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Karma.Core.Metadata.Extractors;
 
 namespace Karma.Core.Metadata
 {
@@ -15,7 +16,7 @@ namespace Karma.Core.Metadata
         public IList<Attribute> Attributes { get; private set; }
 
         public T Member { get; private set; }
-        
+
         public MemberMetadata(T member, Type type)
         {
             Member = member;
