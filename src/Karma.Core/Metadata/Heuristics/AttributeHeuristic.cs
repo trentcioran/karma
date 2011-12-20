@@ -1,4 +1,6 @@
 
+using System;
+
 namespace Karma.Core.Metadata.Heuristics
 {
     public class AttributeHeuristic :
@@ -11,7 +13,9 @@ namespace Karma.Core.Metadata.Heuristics
 
         public override bool IsSelectable(object memberInfo)
         {
-            return true;
+            Attribute att = memberInfo as Attribute;
+
+            return att != null;
         }
     }
 }

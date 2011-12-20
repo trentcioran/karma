@@ -12,7 +12,7 @@ namespace Karma.Core.Metadata.Heuristics
         SelectorHeuristic<OperationMetadata>
     {
         private readonly Regex _blacklistExpression =
-            new Regex(@"get_|set_|ToString|GetType|GetHashCode|Equals");
+            new Regex(@"\.ctor|get_|set_|ToString|GetType|GetHashCode|Equals");
 
         private static IDictionary<string,ICollection<string>> methodsToIgnoreByTypeCache =
             new ConcurrentDictionary<string, ICollection<string>>();
@@ -39,7 +39,10 @@ namespace Karma.Core.Metadata.Heuristics
         public override bool IsSelectable(object memberInfo)
         {
             MethodInfo info = memberInfo as MethodInfo;
-            Ensure.NotNull(info);
+            if (info == null)
+            {
+                return false;
+            }
 
             ICollection<string> methodsToIgnore = GetMethodsToIgnore(info.DeclaringType);
 

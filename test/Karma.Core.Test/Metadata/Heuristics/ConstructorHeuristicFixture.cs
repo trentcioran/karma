@@ -1,3 +1,7 @@
+using System;
+using System.Reflection;
+using Karma.Core.ClassAnalyzerSample;
+using Karma.Core.Metadata.Heuristics;
 using NUnit.Framework;
 
 namespace Karma.Core.Test.Metadata.Heuristics
@@ -8,19 +12,25 @@ namespace Karma.Core.Test.Metadata.Heuristics
         [Test]
         public void WithNoConstructorTest()
         {
-            Assert.Fail();
-        }
+            ConstructorHeuristic heuristic = new ConstructorHeuristic();
 
-        [Test]
-        public void WithNoPublicConstructorTest()
-        {
-            Assert.Fail();
+            Type type = typeof(Simple);
+            ConstructorInfo[] items = type.GetConstructors();
+
+            bool selectable = heuristic.IsSelectable(items[0]);
+            Assert.That(selectable, Is.True);
         }
 
         [Test]
         public void WithPublicConstructorTest()
         {
-            Assert.Fail();
+            ConstructorHeuristic heuristic = new ConstructorHeuristic();
+
+            Type type = typeof(WithConstructor);
+            ConstructorInfo[] items = type.GetConstructors();
+
+            bool selectable = heuristic.IsSelectable(items[0]);
+            Assert.That(selectable, Is.True);
         }
     }
 }

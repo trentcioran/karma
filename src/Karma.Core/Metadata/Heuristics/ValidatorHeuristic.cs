@@ -17,7 +17,10 @@ namespace Karma.Core.Metadata.Heuristics
         public override bool IsSelectable(object memberInfo)
         {
             MethodInfo info = memberInfo as MethodInfo;
-            Ensure.NotNull(info);
+            if (info == null)
+            {
+                return false;
+            }
 
             return _validatorExpression.IsMatch(info.Name);
         }

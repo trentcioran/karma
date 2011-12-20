@@ -61,6 +61,7 @@
     <Compile Include="Metadata\Extractors\ConstructorExtractorFixture.cs" />
     <Compile Include="Metadata\Extractors\ContractExtractorFixture.cs" />
     <Compile Include="Metadata\Extractors\EnablerExtractorFixture.cs" />
+    <Compile Include="Metadata\Extractors\ExtractorFixtureBase.cs" />
     <Compile Include="Metadata\Extractors\OperationExtractorFixture.cs" />
     <Compile Include="Metadata\Extractors\ValidatorExtractorFixture.cs" />
     <Compile Include="Metadata\Heuristics\AttributeHeuristicFixture.cs" />

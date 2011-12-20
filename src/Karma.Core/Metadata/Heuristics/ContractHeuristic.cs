@@ -15,7 +15,10 @@ namespace Karma.Core.Metadata.Heuristics
         public override bool IsSelectable(object memberInfo)
         {
             Type type = memberInfo as Type;
-            Ensure.NotNull(type);
+            if (type == null)
+            {
+                return false;
+            }
 
             return !type.Namespace.StartsWith("System");
         }

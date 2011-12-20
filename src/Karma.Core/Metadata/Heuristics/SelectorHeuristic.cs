@@ -12,10 +12,7 @@ namespace Karma.Core.Metadata.Heuristics
         public virtual bool HasPrecedence(ISelectorHeuristic heuristic,
             object member)
         {
-            SelectorHeuristic<T> typedHeuristic =
-                heuristic as SelectorHeuristic<T>;
-
-            if (this != heuristic && typedHeuristic != null && IsSelectable(member))
+            if (IsExclusive && this != heuristic && IsSelectable(member))
             {
                 return true;
             }

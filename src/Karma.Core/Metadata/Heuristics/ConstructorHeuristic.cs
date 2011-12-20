@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace Karma.Core.Metadata.Heuristics
 {
     public class ConstructorHeuristic :
@@ -10,7 +12,7 @@ namespace Karma.Core.Metadata.Heuristics
 
         public override bool IsSelectable(object memberInfo)
         {
-            return true;
+            return (memberInfo as ConstructorInfo) != null;
         }
     }
 }
