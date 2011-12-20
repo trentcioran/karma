@@ -25,19 +25,73 @@ namespace Karma.Core.Test.Metadata.Extractors
         [Test]
         public void WithOperationsTest()
         {
-            Assert.Fail();
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithOperation);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, Heuristics);
+
+            Assert.That(metadata.Operations, Is.Not.Empty);
+        }
+
+        [Test]
+        public void WithOperationsWithNoHeuristicsTest()
+        {
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithOperation);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, EmptyHeuristics);
+
+            Assert.That(metadata.Operations, Is.Not.Empty);
         }
 
         [Test]
         public void WithEnablerMethodTest()
         {
-            Assert.Fail();
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithEnabler);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, Heuristics);
+
+            Assert.That(metadata.Operations, Is.Empty);
+        }
+
+        [Test]
+        public void WithEnablerMethodWithNoHeuristicsTest()
+        {
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithEnabler);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, EmptyHeuristics);
+
+            Assert.That(metadata.Operations, Is.Not.Empty);
         }
 
         [Test]
         public void WithValidatorMethodTest()
         {
-            Assert.Fail();
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithValidator);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, Heuristics);
+
+            Assert.That(metadata.Operations, Is.Empty);
+        }
+
+        [Test]
+        public void WithValidatorMethodWithNoHeuristicsTest()
+        {
+            OperationExtractor extractor = new OperationExtractor(Heuristic);
+            Type type = typeof(WithValidator);
+            ClassMetadata metadata = new ClassMetadata(type);
+
+            extractor.Extract(type, metadata, EmptyHeuristics);
+
+            Assert.That(metadata.Operations, Is.Not.Empty);
         }
     }
 }
